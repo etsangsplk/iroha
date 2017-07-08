@@ -18,7 +18,7 @@
 #ifndef IROHA_APPLICATION_HPP
 #define IROHA_APPLICATION_HPP
 
-#include <network/network_api.h>
+#include <network/logger_service.hpp>
 #include <ametsuchi/ametsuchi.hpp>
 #include <model/model.hpp>
 

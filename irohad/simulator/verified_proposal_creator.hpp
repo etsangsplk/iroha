@@ -15,21 +15,23 @@
  * limitations under the License.
  */
 
-#ifndef IROHA_ORDERING_SERVICE_STUB_HPP
-#define IROHA_ORDERING_SERVICE_STUB_HPP
+#ifndef IROHA_VERIFIED_PROPOSAL_CREATOR_HPP
+#define IROHA_VERIFIED_PROPOSAL_CREATOR_HPP
 
-#include <ordering/ordering_gate.hpp>
+#include <model/model.hpp>
 
 namespace iroha {
-  namespace ordering {
-    class OrderingServiceStub : public OrderingService {
-     public:
-      void propagate_transaction(const model::Transaction &transaction) override;
-      rxcpp::observable<model::Proposal> on_proposal() override;
-     private:
-      rxcpp::subjects::subject<model::Proposal> proposals_;
-    };
-  }//namespace ordering
-}// namespace iroha
+namespace simulator{
+class VerifiedProposalCreator {
+  /**
+   *
+   */
+  virtual model::Proposal process_proposal(model::Proposal);
 
-#endif //IROHA_ORDERING_SERVICE_STUB_HPP
+  virtual rxcpp::observervable<model::Proposal> on_verified_proposal();
+
+};
+}
+}
+
+#endif //IROHA_VERIFIED_PROPOSAL_CREATOR_HPP

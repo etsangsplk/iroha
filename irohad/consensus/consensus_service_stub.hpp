@@ -19,7 +19,7 @@
 #define IROHA_CONSENSUS_SERVICE_STUB_HPP
 
 #include <ametsuchi/ametsuchi.hpp>
-#include <consensus/consensus_service.hpp>
+#include <consensus/consensus_gate.hpp>
 #include <validation/chain/validator.hpp>
 #include <validation/stateful/validator.hpp>
 

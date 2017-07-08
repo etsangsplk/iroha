@@ -14,22 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+#ifndef IROHA_PEER_SERVICE_HPP
+#define IROHA_PEER_SERVICE_HPP
 
-#ifndef IROHA_ORDERING_SERVICE_STUB_HPP
-#define IROHA_ORDERING_SERVICE_STUB_HPP
-
-#include <ordering/ordering_gate.hpp>
-
-namespace iroha {
-  namespace ordering {
-    class OrderingServiceStub : public OrderingService {
-     public:
-      void propagate_transaction(const model::Transaction &transaction) override;
-      rxcpp::observable<model::Proposal> on_proposal() override;
-     private:
-      rxcpp::subjects::subject<model::Proposal> proposals_;
-    };
-  }//namespace ordering
-}// namespace iroha
-
-#endif //IROHA_ORDERING_SERVICE_STUB_HPP
+#endif //IROHA_PEER_SERVICE_HPP

@@ -27,14 +27,14 @@ namespace iroha {
     /**
      * Ordering service interface for peer communication service
      */
-    class OrderingService {
+    class OrderingGate {
      public:
 
       /**
        * Propagate a signed transaction for further processing
        * @param transaction
        */
-      virtual void propagate_transaction(const model::Transaction &transaction) = 0;
+      virtual void send(const model::Transaction &transaction) = 0;
 
       /**
        * Return observable of all proposals in the consensus

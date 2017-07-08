@@ -34,9 +34,11 @@ namespace iroha {
     }
 
     CommandExecutorStub::CommandExecutorStub(WsvQuery &query) : query_(query) {
+      //
+      // Link:
       // https://stackoverflow.com/questions/9998402/c11-does-not-deduce-type-when-stdfunction-or-lambda-functions-are-involved
-      map_.insert<model::AddPeer>(std::bind(&CommandExecutorStub::executeAddPeer,
-                                          this, std::placeholders::_1));
+      map_.insert<model::AddPeer>(std::bind(
+          &CommandExecutorStub::executeAddPeer, this, std::placeholders::_1));
     }
   }  // namespace ametsuchi
 }  // namespace iroha

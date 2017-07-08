@@ -17,10 +17,10 @@
 #ifndef IROHA_PEER_COMMUNICATION_STUB_HPP
 #define IROHA_PEER_COMMUNICATION_STUB_HPP
 
-#include <network/network_api.h>
+#include <network/logger_service.hpp>
 #include <ametsuchi/ametsuchi.hpp>
-#include <consensus/consensus_service.hpp>
-#include <ordering/ordering_service.hpp>
+#include <consensus/consensus_gate.hpp>
+#include <ordering/ordering_gate.hpp>
 #include <validation/chain/validator.hpp>
 #include <validation/stateful/validator.hpp>
 #include <model/model_crypto_provider.hpp>

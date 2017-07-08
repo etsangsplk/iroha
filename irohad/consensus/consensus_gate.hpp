@@ -27,20 +27,20 @@ namespace iroha {
     /**
      * Consensus interface for peer communication service
      */
-    class ConsensusService {
+    class ConsensusGate {
      public:
 
       /**
        * Vote for a block formed from proposal
        * @param block
        */
-      virtual void vote_block(model::Block &block) = 0;
+      virtual void vote(model::Block &block) = 0;
 
       /**
        * Return observable of all commits from the consensus
        * @return
        */
-      virtual rxcpp::observable<rxcpp::observable<model::Block>> on_commit() = 0;
+      virtual rxcpp::observable<model::Block> on_commit() = 0;
     };
   } // namespace consensus
 } // namespace iroha

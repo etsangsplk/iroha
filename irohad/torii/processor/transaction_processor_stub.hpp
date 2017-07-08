@@ -18,7 +18,7 @@
 #ifndef IROHA_TRANSACTION_PROCESSOR_STUB_HPP
 #define IROHA_TRANSACTION_PROCESSOR_STUB_HPP
 
-#include <network/network_api.h>
+#include <network/logger_service.hpp>
 #include <model/model_crypto_provider.hpp>
 #include <torii/processor/transaction_processor.hpp>
 #include <validation/stateless/validator.hpp>
