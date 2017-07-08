@@ -25,7 +25,7 @@ namespace iroha {
     /**
      * Interface provides methods for fetching consensus-related data.
      */
-    class ConsensusListener {
+    class LoggerService {
      public:
       /**
        * Event is triggered when proposal arrives from network.
@@ -42,26 +42,6 @@ namespace iroha {
        * on peer startup - peer will get all actual blocks.
        */
       virtual rxcpp::observable<rxcpp::observable<model::Block>> on_commit() = 0;
-    };
-
-    /**
-     * Interface for propagating transaction in a network
-     */
-    class TransactionPropagator {
-     public:
-      /**
-       * Method spreads transaction to other members of a network
-       * @param tx - transaction for propagation
-       */
-      virtual void propagate_transaction(const model::Transaction &tx) = 0;
-    };
-
-    /**
-     * Public API interface for communication between current peer and other
-     * peers in a network
-     */
-    class PeerCommunicationService : public TransactionPropagator,
-                                     public ConsensusListener {
     };
   }
 }
