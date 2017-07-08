@@ -17,7 +17,7 @@ limitations under the License.
 #include "command_service.hpp"
 #include <grpc++/server_context.h>
 #include <ordering/queue.hpp>
-#include <validation/stateless/validator.hpp>
+#include <validation/stateless/stateless_validator.hpp>
 
 namespace api {
 

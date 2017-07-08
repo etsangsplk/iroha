@@ -23,7 +23,7 @@ limitations under the License.
 #include <torii/processor/stub_query_processor.hpp>
 #include <torii/processor/transaction_processor_stub.hpp>
 #include <torii/torii_stub.hpp>
-#include <validation/chain/validator_stub.hpp>
+#include <validation/chain/chain_validator_stub.hpp>
 #include <validation/stateful/stub_validator.hpp>
 #include <validation/stateless/validator_stub.hpp>
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#include <validation/chain/validator_stub.hpp>
+#include <validation/chain/chain_validator_stub.hpp>
 #include <validation/chain/block_validator_stub.hpp>
 
 namespace iroha {

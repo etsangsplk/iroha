@@ -14,8 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-#ifndef __RANDOM_HPP_
-#define __RANDOM_HPP_
 
 #include "config.hpp"
 
@@ -64,4 +62,3 @@ namespace common {
     };
 };  // namespace common
 
-#endif

@@ -21,7 +21,7 @@
 #include <network/logger_service.hpp>
 #include <model/model_crypto_provider.hpp>
 #include <torii/processor/transaction_processor.hpp>
-#include <validation/stateless/validator.hpp>
+#include <validation/stateless/stateless_validator.hpp>
 
 namespace iroha {
   namespace torii {
